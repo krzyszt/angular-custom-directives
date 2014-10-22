@@ -20,3 +20,12 @@ appMod.directive('leave', function(){
       });
    };
 });
+
+appMod.directive('talk', function(){
+   return function(scope, element, attrs){
+      element.bind('mouseenter', function(){
+         scope.$apply(attrs.talk);
+         console.log(attrs.talk);
+      });
+   };
+});
