@@ -10,6 +10,6 @@ angular.module('myApp', [
   'myApp.controllers'
 ]).
 config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/test', {templateUrl: 'partials/view.tpl.html', controller: 'DirectiveTestCtrl'});
-  $routeProvider.otherwise({redirectTo: '/test'});
+  $routeProvider.when('/custom-directives', {templateUrl: 'partials/view.tpl.html', controller: 'DirectiveTestCtrl'});
+  $routeProvider.otherwise({redirectTo: '/'});
 }]);

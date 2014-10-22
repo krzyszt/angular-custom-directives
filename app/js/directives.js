@@ -5,10 +5,28 @@
 
 var appMod = angular.module('myApp.directives', []);
 
-appMod.directive('custom', function() {
+appMod.directive('attrDir', function(){
+   return {
+      restrict: 'A',
+      link: function(){
+         alert('This is attribute directive!');
+      }
+   };
+});
+
+appMod.directive('attrDir2', function(){
+   return {
+      restrict: 'A',
+      link: function(){
+         alert('This is the 2nd attribute directive!');
+      }
+   };
+});
+
+appMod.directive('element', function() {
    return {
       restrict: 'E',
-      template: '<div class="jumbotron"> This is a custom directive!</div>'
+      template: '<div class="jumbotron"> This is element directive!</div>'
    };
 });
 
@@ -19,14 +37,7 @@ appMod.directive('classDir', function() {
    };
 });
 
-appMod.directive('attrDir', function(){
-   return {
-      restrict: 'A',
-      link: function(){
-         alert('This is attribute directive!');
-      }
-   };
-});
+
 
 appMod.directive('commentDir', function(){
    return {
