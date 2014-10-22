@@ -7,9 +7,11 @@ angular.module('myApp', [
   'myApp.filters',
   'myApp.services',
   'myApp.directives',
-  'myApp.controllers'
+  'myApp.controllers',
+  'myApp.directives.behaviours'
 ]).
 config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/custom-directives', {templateUrl: 'partials/view.tpl.html', controller: 'DirectiveTestCtrl'});
+  $routeProvider.when('/custom-directives', {templateUrl: 'partials/custom.tpl.html', controller: 'DirectiveTestCtrl'});
+  $routeProvider.when('/behaviours', {templateUrl: 'partials/behaviours.tpl.html', controller: 'DirectiveTestCtrl'});
   $routeProvider.otherwise({redirectTo: '/'});
 }]);
