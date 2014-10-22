@@ -6,17 +6,17 @@
 var appMod = angular.module('myApp.directives.behaviours', []);
 
 appMod.directive('enter', function(){
-   return function(scope, element){
+   return function(scope, element, attrs){
       element.bind('mouseenter', function(){
-         console.log('Inside');
+         element.addClass(attrs.enter);
       });
    };
 });
 
 appMod.directive('leave', function(){
-   return function(scope, element){
+   return function(scope, element, attrs){
       element.bind('mouseleave', function(){
-         console.log('Out');
+         element.removeClass(attrs.enter);
       });
    };
 });
