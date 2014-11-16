@@ -7,6 +7,7 @@ appMod.directive('myGrid', function(){
          '<div class="panel panel-default">' +
             '<div class="panel-heading">' + 
                '<h3 class="panel-title">' +
+                  'My Grid' +
                   '{{ pane.title }}' + 
                   '</h3>' +
             '</div>' +

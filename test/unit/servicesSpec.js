@@ -2,7 +2,7 @@
 
 /* jasmine specs for services go here */
 
-describe('service', function() {
+xdescribe('service', function() {
   beforeEach(module('myApp.services'));
 
 
