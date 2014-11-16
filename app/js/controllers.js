@@ -14,4 +14,12 @@ angular.module('myApp.controllers', [])
         $scope.deleteSomeStuff = function(){
            alert('Deleting some stuff!');
         };
+  }])
+  .controller('GridCtrl',['$scope', function($scope){
+        
+        $scope.pane = {
+           title: 'Custom Grid',
+           body: 'Grid body'
+        };
+        
   }]);
